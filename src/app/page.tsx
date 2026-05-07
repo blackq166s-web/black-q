@@ -29,10 +29,10 @@ export default function Home() {
         </p>
 
         <p className="text-base md:text-lg text-[var(--color-muted)] max-w-2xl leading-relaxed">
-          我是 BlackQ，一名 AI 工程师。<br />
-          白天我把复杂的 AI 系统交付给企业，<br />
-          晚上我把它翻译成普通人也能用的工具。<br />
-          <span className="text-[var(--color-fg)]">包括你爸妈，也包括你。</span>
+我是 BlackQ，一名 AI 工程化实践者。<br />
+我在真实项目里理解 AI，也在这里把它拆开、讲清楚，<br />
+整理成普通人也能看懂、用得上的内容和工具。<br />
+<span className="text-[var(--color-fg)]">让 AI 走近每一个普通人的日常。</span>
         </p>
 
         <div className="mt-12 flex items-center gap-2 font-mono text-sm text-[var(--color-muted)]">
