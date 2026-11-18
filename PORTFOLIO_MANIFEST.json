@@ -1,10 +1,15 @@
 {
+  "assets/fonts/notosanssc-ofl.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
+  "assets/fonts/notosanssc-site.woff2": "9f4bea54350b5f399303384dac7099ac310b663ce5993d40260bbec675afdc65",
+  "assets/fonts/spacegrotesk-ofl.txt": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
+  "assets/fonts/spacegrotesk-regular.woff2": "65fd17fcbd2e2f522940b5f67ead3d23329e02891aa5495e74d11a499c0b0673",
+  "assets/fonts/spacegrotesk.woff2": "685bbbf69fa616df1ef81847c85fc76be097ddfb3468ff2257be54511ab3130f",
   "assets/projects/ai.svg": "e7dcebe455da3c4a5f73cbb3feca7ca9ac34d8e9e47c86cf0ddbb3a0f75f10c8",
   "assets/projects/cibo.webp": "7306fcd89ba2b1d1ded155428aa8dd734e1f3cac5cf2f3de22f034bae61b76ab",
   "assets/projects/game.svg": "93434bd1335559f5b7e65c379aa2d21911f7b14613769097adb3a2fda708a3ec",
   "assets/projects/keyboard.webp": "e68227e56791511745f588b7a453dca1eb872d6584a823ca658b860a5b582a4f",
   "content/projects.json": "16f83da53d00bf79373e5a48aa6c1dc70d33d71ef72745e2ce19874068cb2de8",
-  "index.html": "5133ecf431570dac10c37e462fda6735eec50c3cd33b7dcdcc2041f956682f6a",
+  "index.html": "d6595a32fc1e2ec4d0bf1d8296f0041c03c318ccc225427fe651f56ea50fabc3",
   "portrait/assets/portrait.webp": "77b0dc0b11c9d0d3405ef1baaeecccb87225013cec79d2479ff60414272b8b0f",
   "portrait/boot.js": "319d2df1d5487ce14667c7ffe78dab65b9894af0e2e722cb99c57ceab201d8af",
   "portrait/index.html": "0404a7f486a7f874e38008e68837dd3a9ee11b43e7886b5951ff19f32c783afe",
@@ -12,6 +17,6 @@
   "portrait/vendor/THREE-LICENSE.txt": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
   "portrait/vendor/three.module.js": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
   "projects/keyboard-preview.html": "170c0ba6002ecf34f86193fa7df5265415ba6917d0bcf24e06b5870a34e79e3c",
-  "site.js": "e23a94d010bbb6d6263833cb559737232e87c5c68b9a0a2362567a955d520ad9",
-  "style.css": "580c60ea678b58204de2c205a29397689cc8d8ee93b8eecb5b98adb12139ee9b"
+  "site.js": "ca601153ff7e1efb89eb6e888ebb8550ff2f325f831eaf8ae2edffa89c8824f0",
+  "style.css": "4c8aa39567f88205c66ac2c7dd84f06f9a1c132fc2e91f48ed96ac8d5e2c9063"
 }
