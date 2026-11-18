@@ -1,0 +1,17 @@
+{
+  "assets/projects/ai.svg": "e7dcebe455da3c4a5f73cbb3feca7ca9ac34d8e9e47c86cf0ddbb3a0f75f10c8",
+  "assets/projects/cibo.webp": "7306fcd89ba2b1d1ded155428aa8dd734e1f3cac5cf2f3de22f034bae61b76ab",
+  "assets/projects/game.svg": "93434bd1335559f5b7e65c379aa2d21911f7b14613769097adb3a2fda708a3ec",
+  "assets/projects/keyboard.webp": "e68227e56791511745f588b7a453dca1eb872d6584a823ca658b860a5b582a4f",
+  "content/projects.json": "16f83da53d00bf79373e5a48aa6c1dc70d33d71ef72745e2ce19874068cb2de8",
+  "index.html": "5133ecf431570dac10c37e462fda6735eec50c3cd33b7dcdcc2041f956682f6a",
+  "portrait/assets/portrait.webp": "77b0dc0b11c9d0d3405ef1baaeecccb87225013cec79d2479ff60414272b8b0f",
+  "portrait/boot.js": "319d2df1d5487ce14667c7ffe78dab65b9894af0e2e722cb99c57ceab201d8af",
+  "portrait/index.html": "0404a7f486a7f874e38008e68837dd3a9ee11b43e7886b5951ff19f32c783afe",
+  "portrait/scene.js": "a004075c4469fc29d28d88155bf78d2b1be2f047a78b152cd18b5607772d18c0",
+  "portrait/vendor/THREE-LICENSE.txt": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
+  "portrait/vendor/three.module.js": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
+  "projects/keyboard-preview.html": "170c0ba6002ecf34f86193fa7df5265415ba6917d0bcf24e06b5870a34e79e3c",
+  "site.js": "e23a94d010bbb6d6263833cb559737232e87c5c68b9a0a2362567a955d520ad9",
+  "style.css": "580c60ea678b58204de2c205a29397689cc8d8ee93b8eecb5b98adb12139ee9b"
+}

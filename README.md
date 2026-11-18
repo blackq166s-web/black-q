@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Black Q — Projects & Play
 
-## Getting Started
+Personal portfolio for black-q.com. The deployed static website is in `site/`.
 
-First, run the development server:
+## Preview locally
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```sh
+python -m http.server 4173 --bind 127.0.0.1 --directory site
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Edit project cards in `site/content/projects.json`. Keep page dependencies and images inside `site/`. This website requires no runtime secrets or database.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Vercel reads `vercel.json`: framework Other, no dependency installation or build step, output directory `site`. A non-production Git branch creates a preview; the production branch is `main`.
 
-## Learn More
+`PORTFOLIO_MANIFEST.json` records the runtime file hashes at this publication. Refresh it when updating runtime files.
 
-To learn more about Next.js, take a look at the following resources:
+The former Next.js application is retained in the repository for reference and rollback. It is outside the selected static output and is not served by the current deployment configuration. Its previous production commit is `21eb12504054e18c4a903d0332b7747e8573df5c`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project pages and domains
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Keep the personal hub at `black-q.com`. Add ordinary static project pages under `site/projects/<slug>/`, with their own `index.html` and dependencies. Keep project assets scoped to their own folders and preserve them when updating the hub.
 
-## Deploy on Vercel
+Projects needing independent releases or backend services can be deployed separately and use a dedicated subdomain such as `ai.black-q.com`. Add individual DNS records only when that project is ready. Keep existing project URLs usable when moving a project.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The present release contains four project cases. The planned nine cards and additional project pages are added as their materials become available.
