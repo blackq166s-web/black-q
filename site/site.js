@@ -14,8 +14,8 @@ let renderedRoute='', linkNavigation=null, isNavigating=false;
 let animations=!preference.matches;
 const viewMemory=new Map();
 const categoryDescriptions=new Map([
-  ['软件与网站','个人应用、网页与小工具'],
   ['AI 与工程','模型部署、性能测试与硬件选型'],
+  ['软件与网站','个人应用、网页与小工具'],
   ['硬件与制作','键盘与实物设计'],
   ['游戏','玩法构想与游戏设计'],
 ]);
@@ -50,8 +50,13 @@ function categoryName(route){
   if(!route.startsWith('work/'))return null;
   try{return decodeURIComponent(route.slice(5))}catch{return null}
 }
+function categoryNames(){
+  const orderedNames=new Set([...categoryDescriptions.keys(),...groups.keys()]);
+  return [...orderedNames].filter(name=>groups.has(name));
+}
 function categoryIndex(){
-  const rows=[...groups].map(([name,items])=>{
+  const rows=categoryNames().map(name=>{
+    const items=groups.get(name);
     const summary=categoryDescriptions.get(name);
     return `<li>
     <a class="category-row" href="${esc(categoryUrl(name))}">
@@ -81,8 +86,8 @@ function projectCard(p){
 }
 function workIndex(selected, visible){
   const filter=(name, url, current)=>`<a class="pill" href="${esc(url)}" data-work-filter${current?' aria-current="true"':''}>${esc(name)}</a>`;
-  const filters=[...groups.keys()].map(name=>filter(name,categoryUrl(name),name===selected));
-  return `<section class="page-title work-region"><small>WORK / 持续更新的作品集合</small><h1>做过的，<br>还在探索的。</h1></section>
+  const filters=categoryNames().map(name=>filter(name,categoryUrl(name),name===selected));
+  return `<section class="page-title work-region"><small>WORK / 持续更新的作品集合</small><h1>完成的<br>与还在探索的</h1></section>
     <section class="section work-region" aria-label="作品列表">
       <nav class="work-filters" aria-label="作品分类">
         ${filter('全部','#work',selected===null)}${filters.join('')}
