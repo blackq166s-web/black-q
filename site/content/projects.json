@@ -67,6 +67,41 @@
       "outcomes": ["形成项目设定、玩法规则与测试问题的文档入口。"],
       "limits": ["读取的测试记录未执行实机验证；未核实可玩构建。", "当前展示为策划内容，概念图不代表最终美术。"],
       "resources": [], "reviewedAt": "2026-11-17"
+    },
+    {
+      "id": "compute-axis",
+      "name": "算力坐标 Compute Axis",
+      "summary": "对比 329 款硬件的显存和带宽，从 5,056 条模型记录中选择模型，按量化精度筛选部署配置。",
+      "category": "AI 与工程",
+      "stage": "网页版可用",
+      "cover": "assets/projects/compute-axis.webp",
+      "coverAlt": "算力坐标的硬件选型页面，展示四档量化容量和候选硬件。",
+      "coverCaption": "截取自当前硬件选型页面。",
+      "targetUrl": "https://compute-axis-psi.vercel.app/",
+      "featured": false,
+      "order": 25,
+      "intro": "为在本地运行大模型的人提供硬件规格对照和配置初筛。",
+      "contribution": [],
+      "sections": [
+        {
+          "title": "从模型和量化精度筛选硬件",
+          "text": "比较显存与带宽，根据模型容量和预期生成速度缩小候选范围。"
+        }
+      ],
+      "outcomes": [
+        "硬件目录可按型号、厂商和类别筛选，支持按四档量化精度估算模型容量。"
+      ],
+      "limits": [
+        "生成速度按带宽估算。实际表现取决于模型、上下文、推理框架和多卡互联。"
+      ],
+      "resources": [
+        {
+          "label": "查看项目源码",
+          "url": "https://github.com/blackq166s-web/compute-axis",
+          "kind": "external"
+        }
+      ],
+      "reviewedAt": "2026-11-19"
     }
   ]
 }
