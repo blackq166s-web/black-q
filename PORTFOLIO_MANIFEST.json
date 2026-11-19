@@ -1,6 +1,16 @@
 {
+  "assets/about/desk.webp": "ba3429ba7693322fd2f8cdf45c354022b437bde9493eb4f4e05c84c29da29950",
+  "assets/about/icefall.webp": "dec804454b2fb90a6898dca8c31f879e0cb116f668638c86607dd0c0bfa4f34d",
+  "assets/about/lanterns.webp": "11e102ec73888ca63cbcf68394138eabbd09855d503eb7b7765df953d43a341d",
+  "assets/about/night-tower.webp": "ba9a339522f14c99bd837d391e7164150441455c96ab7d88cb32e04cb74587cb",
+  "assets/about/pendant-lights.webp": "3ecb293509023686645f628832c091f93b0fc04609ffb295e7a8a65474da97fe",
+  "assets/about/race-track.webp": "0fc0648552bd4486d5ecd2e0e5df6d45706aad91d38443ddb32bb05b3dad1017",
+  "assets/about/skiing.webp": "e04cc1c10e2413a8996cb69adaeff5a5b5a53c7fe7cb2293ac4cc50103495d98",
+  "assets/about/vinyl.webp": "5f8ca58f6ac474561923184c06887102f9b36fe40a2e8aa11a6d8d3981cb5910",
+  "assets/about/water-lights.webp": "bedfc6f9adc613e625d479ec8fc7aa7873a665fad9e5c72ddc069b289495ad04",
+  "assets/about/workbench.webp": "b231bdd5c5c579ffbf10fdaa0923f659bd8f7151f15d257cf1f894e61ba0ba40",
   "assets/fonts/notosanssc-ofl.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
-  "assets/fonts/notosanssc-site.woff2": "bf9ca0bb841c6b9f2b24b123ea6dc8e057d2e6c5cd7946e62ceaa798c17e28d3",
+  "assets/fonts/notosanssc-site.woff2": "4ed1eccd81f9b644c84a9da5a8f5c1e14ebfe124a72cf7439c584958f4ff8bee",
   "assets/fonts/spacegrotesk-ofl.txt": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
   "assets/fonts/spacegrotesk-regular.woff2": "65fd17fcbd2e2f522940b5f67ead3d23329e02891aa5495e74d11a499c0b0673",
   "assets/fonts/spacegrotesk.woff2": "685bbbf69fa616df1ef81847c85fc76be097ddfb3468ff2257be54511ab3130f",
@@ -11,8 +21,8 @@
   "assets/projects/game.svg": "93434bd1335559f5b7e65c379aa2d21911f7b14613769097adb3a2fda708a3ec",
   "assets/projects/keyboard.webp": "e68227e56791511745f588b7a453dca1eb872d6584a823ca658b860a5b582a4f",
   "assets/projects/seventh-wound-key-art.jpg": "be9ce48f02c0bbba24d747160bb305cf199ac61ab5ef2ddf7e668f14fa2d6232",
-  "content/projects.json": "1c61cdd48ef2960f3be9fd4754337b112d9c384f5403e293977176da0031cc52",
-  "index.html": "761a6e39bc73a455b53da256345fff55c89e0db2825fb5bde46454724c513672",
+  "content/projects.json": "9c7281693924b99f82510905c6bd2f80897f8e9cb273e9475ef11f2b58c79fb4",
+  "index.html": "ff2cf61b0cb20cf76ca9567c372648d2e139a7b8f433575e2c994924a5faa694",
   "portrait/assets/portrait.webp": "77b0dc0b11c9d0d3405ef1baaeecccb87225013cec79d2479ff60414272b8b0f",
   "portrait/boot.js": "319d2df1d5487ce14667c7ffe78dab65b9894af0e2e722cb99c57ceab201d8af",
   "portrait/index.html": "0404a7f486a7f874e38008e68837dd3a9ee11b43e7886b5951ff19f32c783afe",
@@ -20,6 +30,6 @@
   "portrait/vendor/THREE-LICENSE.txt": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
   "portrait/vendor/three.module.js": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
   "projects/keyboard-preview.html": "170c0ba6002ecf34f86193fa7df5265415ba6917d0bcf24e06b5870a34e79e3c",
-  "site.js": "737e1e229f2290f91c90a48c238f61267e6e7b56368fbb481200f41f719fbcdc",
-  "style.css": "718dd13f9f4070f7ff3cedd8409bd6a74d9da433ed9ac9e1254d5be7563e7a36"
+  "site.js": "93b1a16c5ca3e7da913df61794b4e3851c3c2695287f4699dbdd0f6310dc5978",
+  "style.css": "4329b27eefa42996450b4cc74835e95ba1989c89965db345efa200f6a8d511a9"
 }

@@ -4,12 +4,12 @@ const header=document.querySelector('header');
 const navLinks=header.querySelectorAll('nav a');
 const description=document.querySelector('meta[name="description"]');
 const curtain=document.querySelector('.transition');
-const curtainLabel=curtain.querySelector('span');
+const curtainLabel=curtain.querySelector('.transition-label');
 const clock=document.querySelector('#clock');
 const preference=matchMedia('(prefers-reduced-motion: reduce)');
 const compactPreview=new URLSearchParams(location.search).get('layout')==='compact';
 
-let site, projects, groups, routeTimer;
+let site, projects, groups, routeTimer, photoStrip;
 let renderedRoute='', linkNavigation=null, isNavigating=false;
 let animations=!preference.matches;
 const viewMemory=new Map();
@@ -96,12 +96,11 @@ function workIndex(selected, visible){
       ${visible.length?`<ul class="work-grid" role="list">${visible.map(projectCard).join('')}</ul>`:'<p class="work-empty">作品正在整理。</p>'}
     </section>`;
 }
-function portrait(view='home'){
-  const home=view==='home';
+function portrait(){
   const motion=animations?'animated':'static';
-  return `<iframe class="${home?'hero-portrait':'about-portrait'}"
-    src="portrait/index.html?view=${view}&motion=${motion}&v=20261117-audit"
-    title="去手皮衣点阵人像" loading="${home?'eager':'lazy'}" tabindex="-1"></iframe>`;
+  return `<iframe class="hero-portrait"
+    src="portrait/index.html?view=home&motion=${motion}&v=20261117-audit"
+    title="去手皮衣点阵人像" loading="eager" tabindex="-1"></iframe>`;
 }
 
 function homePage(){
@@ -121,21 +120,140 @@ function homePage(){
   ${categoryIndex()}`;
 }
 
+function benchmarkMetric(label,index){
+  const baseline=100;
+  const scaleMax=120;
+  const change=index-baseline;
+  const delta=`${change>0?'+':'−'}${Math.abs(change)}%`;
+  const bars=[
+    {label:'单实例四卡',value:baseline,text:baseline},
+    {label:'双实例各两卡',value:index,text:`约 ${index}`},
+  ].map(bar=>`<div>
+    <dt>${bar.label}</dt>
+    <dd><span class="benchmark-track" aria-hidden="true"><span style="--value:${bar.value/scaleMax*100}%"></span></span>${bar.text}</dd>
+  </div>`).join('');
+  return `<div class="benchmark-metric">
+    <div class="benchmark-value"><h4>${label}</h4><strong>约 ${delta}</strong></div>
+    <dl class="benchmark-bars">${bars}</dl>
+  </div>`;
+}
+
 function aboutPage(){
   const email=esc(site.email);
-  return `<section class="page-title">
-    <small>ABOUT / 关于我</small>
-    <h1>喜欢动手，<br>也保持好奇。</h1>
-  </section>
-  <section class="section about-layout">
-    <div class="reveal">
-      <p>我在做 AI 部署和企业软件交付。平时会把大模型部署到服务器上，跑实际业务，看回答要等多久、多少人能同时用。我喜欢研究模型和硬件怎么搭配，也会把遇到的问题和实测数据整理下来，方便下次选型时参考。</p>
-      <p>工作之外，我在给自己做一款英语学习软件，也在尝试做游戏、设计键盘、玩3D打印。闲下来喜欢带着相机出门走走。</p>
-      <p>在这里，你可以看到这些项目最后做成了什么样，也能看到中间试过哪些办法、为什么改了主意。如果你也在折腾类似的东西，欢迎写信聊聊。</p>
-      <a class="pill" data-email-link href="mailto:${email}" aria-label="邮件联系 ${email}">${email}</a>
+  return `<div class="section about-page">
+    <div class="about-heading">
+      <h1 lang="en">${esc(site.name)}</h1>
+      <p class="about-role">AI 推理部署 · 企业软件交付</p>
+      <div class="about-intro">
+        <p>我做服务器选型、大模型部署和实测，也把 AI 服务接进企业现有系统。平时会把测试结果和踩过的坑记下来，留给下次选型参考。</p>
+        <p>工作之外，我在做英语学习工具和游戏，也喜欢设计键盘、玩 3D 打印和摄影。</p>
+        <a class="about-email" data-email-link href="mailto:${email}" aria-label="邮件联系 ${email}">${email}</a>
+      </div>
     </div>
-    <div class="reveal">${portrait('about')}</div>
+    <div class="about-layout">
+      <section aria-labelledby="about-career-title">
+        <h2 id="about-career-title">工作经历</h2>
+        <ol class="about-career" role="list">
+          <li>
+            <div class="about-entry-heading">
+              <h3>某国产 GPU 研发上市企业</h3>
+              <span class="about-date"><time datetime="2025-11">2025.11</time> 至今</span>
+            </div>
+            <p><strong>运维工程师</strong> · AI 服务器与工作站选型、私有化部署、系统接入和现场排障。</p>
+          </li>
+          <li>
+            <div class="about-entry-heading">
+              <h3>某市局信息中心</h3>
+              <span class="about-date"><time datetime="2023-04">2023.04</time>–<time datetime="2025-03">2025.03</time></span>
+            </div>
+            <p><strong>实施工程师</strong> · 政企平台实施与运维，负责国产化适配、消息中间件集群调优和灾备恢复。</p>
+          </li>
+        </ol>
+      </section>
+      <section aria-labelledby="about-results-title">
+        <h2 id="about-results-title">代表成果</h2>
+        <div class="about-entry">
+          <h3>多平台大模型推理部署</h3>
+          <dl class="about-platforms" aria-label="多平台部署场景">
+            <div>
+              <dt>NVIDIA</dt>
+              <dd><strong>多卡并发调优</strong><span>独立完成 RTX 工作站选型和部署，比较多卡方案的吞吐与首字延迟。</span></dd>
+            </div>
+            <div>
+              <dt>AMD</dt>
+              <dd><strong>长上下文与内存预算</strong><span>面向长文档任务部署模型，调整预填充以降低启动内存开销。</span></dd>
+            </div>
+            <div>
+              <dt>华为昇腾</dt>
+              <dd><strong>国产化部署与通信验证</strong><span>适配 CANN 环境，验证模型部署并复现多卡通信异常。</span></dd>
+            </div>
+          </dl>
+          <figure class="about-benchmark" aria-labelledby="about-benchmark-title">
+            <figcaption id="about-benchmark-title">性能调优实测</figcaption>
+            <p class="benchmark-note">相对值以单实例四卡为基准 100。</p>
+            ${benchmarkMetric('输出吞吐',118)}
+            ${benchmarkMetric('平均首字延迟',66)}
+            <dl class="benchmark-conditions" aria-label="测试条件">
+              <div><dt>硬件</dt><dd>4 × RTX PRO 6000（每卡 96 GB）</dd></div>
+              <div><dt>模型与框架</dt><dd><span>Qwen3.6-35B-A3B</span><span>vLLM</span></dd></div>
+              <div><dt>长文档负载</dt><dd><span>25K Token 输入</span><span>1K Token 输出</span><span>8 并发</span></dd></div>
+            </dl>
+          </figure>
+        </div>
+        <div class="about-entry">
+          <h3>统一 AI 模型评测平台</h3>
+          <ol class="about-eval-flow" aria-label="评测流程" role="list">
+            <li><strong>定评分规则</strong><span>覆盖通用能力、Agent 能力与特定业务能力</span></li>
+            <li><strong>运行测试</strong><span>基于 EvalScope 分档压测，统一延迟、吞吐与成功率口径</span></li>
+            <li><strong>整理报告</strong><span>将跨平台评测结果汇成统一的交互式可视化报告</span></li>
+          </ol>
+          <a class="about-case-link" href="#project/ai" data-project-id="ai">查看 AI 部署与测试</a>
+        </div>
+      </section>
+      <section class="about-projects" aria-labelledby="about-projects-title">
+        <h2 id="about-projects-title">个人项目</h2>
+        <ul role="list">
+          <li>
+            <a href="https://github.com/blackq166s-web/ai-deploy-advisor" target="_blank" rel="noopener noreferrer" aria-labelledby="about-advisor-name" aria-describedby="about-advisor-summary">
+              <span class="about-project-name" id="about-advisor-name" lang="en">AI Deploy Advisor</span>
+              <span class="about-project-summary" id="about-advisor-summary">对比硬件规格，估算不同模型和量化精度的部署容量。</span>
+            </a>
+          </li>
+          <li>
+            <a href="#project/cibo" data-project-id="cibo" aria-labelledby="about-cibo-name" aria-describedby="about-cibo-summary">
+              <span class="about-project-name" id="about-cibo-name">词泊 Cibo</span>
+              <span class="about-project-summary" id="about-cibo-summary">把查词、发音和本地词库放进一个桌面应用。</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+      <section class="about-education" aria-labelledby="about-education-title">
+        <h2 id="about-education-title">教育背景</h2>
+        <p>计算机科学与技术本科 · 2019–2023</p>
+      </section>
+    </div>
+  </div>
+  ${site.aboutPhotos?.length?aboutPhotos(site.aboutPhotos):''}`;
+}
+
+function aboutPhotos(photos){
+  const items=photos.map(photo=>`<li><img src="assets/about/${encodeURIComponent(photo.id)}.webp?v=strip"
+    width="${Number(photo.width)}" height="${Number(photo.height)}" alt="${esc(photo.alt)}" loading="lazy" decoding="async"></li>`).join('');
+  return `<section class="about-gallery" aria-label="工作之外">
+    <ul class="photo-strip" role="list" aria-label="照片" tabindex="0">${items}</ul>
   </section>`;
+}
+
+function scrollPhotoStrip(){
+  if(!photoStrip||!animations)return;
+  const {top,bottom}=photoStrip.getBoundingClientRect();
+  if(top>=innerHeight||bottom<=0)return;
+  const start=innerHeight*.88;
+  const pageBottom=document.documentElement.scrollHeight-scrollY;
+  const end=Math.max(innerHeight*.22,top+innerHeight-pageBottom);
+  if(end>=start)return;
+  const progress=Math.max(0,Math.min(1,(start-top)/(start-end)));
+  photoStrip.scrollLeft=progress*(photoStrip.scrollWidth-photoStrip.clientWidth);
 }
 
 function resourceLinks(resources){
@@ -190,6 +308,7 @@ function currentRoute(){
 
 function render(route=currentRoute()){
   if(!site)return;
+  photoStrip=null;
   revealObserver.disconnect();
   renderedRoute=route;
 
@@ -215,6 +334,7 @@ function render(route=currentRoute()){
     title=`${selected||'作品'} — Black Q`;
   }else if(route==='about'){
     page.innerHTML=aboutPage();
+    photoStrip=page.querySelector('.photo-strip');
     title='关于我 — Black Q';
   }else{
     const project=projectRoute?projects.find(item=>item.id===route.slice(8)):null;
@@ -254,6 +374,7 @@ document.querySelector('.skip').addEventListener('click',event=>{
 function onScroll(){
   if(isNavigating||renderedRoute!==currentRoute())return;
   viewMemory.set(renderedRoute,{...viewMemory.get(renderedRoute),scroll:scrollY});
+  scrollPhotoStrip();
 }
 
 window.addEventListener('scroll',onScroll,{passive:true});
@@ -325,14 +446,16 @@ window.addEventListener('hashchange',()=>{
     return;
   }
   curtain.classList.remove('run');
+  const welcome=route==='home';
+  curtain.classList.toggle('welcome',welcome);
+  if(!welcome)curtainLabel.textContent=route==='about'?'关于我':isWorkRoute(route)?'作品':route.startsWith('project/')?'项目':'探索';
   void curtain.offsetWidth;
-  curtainLabel.textContent=route==='about'?'关于我':isWorkRoute(route)?'作品':route.startsWith('project/')?'项目':'探索';
   curtain.classList.add('run');
   routeTimer=setTimeout(navigate,310);
 });
 
 curtain.addEventListener('animationend',event=>{
-  if(event.animationName==='pagechange')curtain.classList.remove('run');
+  if(event.target===curtain)curtain.classList.remove('run');
 });
 
 function sendPortraitMotion(frame){

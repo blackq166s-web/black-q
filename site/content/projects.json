@@ -5,7 +5,19 @@
     "email": "hi@black-q.com",
     "description": "项目、创作与持续探索。记录软件、AI 工程、硬件设计和游戏构想。",
     "showGallery": false,
-    "compactFooter": true
+    "compactFooter": true,
+    "aboutPhotos": [
+      {"id": "night-tower", "width": 960, "height": 720, "alt": "花枝围住夜色中亮起的塔和红色屋檐"},
+      {"id": "water-lights", "width": 960, "height": 540, "alt": "夜色中水面上的灯光和倒影"},
+      {"id": "icefall", "width": 720, "height": 960, "alt": "蓝天下垂落的冰瀑"},
+      {"id": "lanterns", "width": 540, "height": 960, "alt": "夜里亮起的一串暖色灯笼"},
+      {"id": "pendant-lights", "width": 960, "height": 720, "alt": "室内悬挂的暖色吊灯"},
+      {"id": "vinyl", "width": 960, "height": 720, "alt": "唱片机、黑胶唱片和音箱"},
+      {"id": "desk", "width": 960, "height": 540, "alt": "蓝紫灯光下的三屏桌面"},
+      {"id": "workbench", "width": 960, "height": 720, "alt": "工作台上的工具和零件"},
+      {"id": "skiing", "width": 960, "height": 590, "alt": "雪地上戴着头盔和雪镜的人，身后是远山"},
+      {"id": "race-track", "width": 960, "height": 542, "alt": "赛车驶过赛道"}
+    ]
   },
   "projects": [
     {
