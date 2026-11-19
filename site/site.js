@@ -9,9 +9,10 @@ const clock=document.querySelector('#clock');
 const preference=matchMedia('(prefers-reduced-motion: reduce)');
 const compactPreview=new URLSearchParams(location.search).get('layout')==='compact';
 
-let site, projects, groups, routeTimer, photoStrip;
+let site, projects, groups, routeTimer, photoStrip, portraitScrollTimer;
 let renderedRoute='', linkNavigation=null, isNavigating=false;
 let animations=!preference.matches;
+let portraitScrolling=false, portraitVisible=false;
 const viewMemory=new Map();
 const categoryDescriptions=new Map([
   ['AI 与工程','模型部署、性能测试与硬件选型'],
@@ -99,7 +100,7 @@ function workIndex(selected, visible){
 function portrait(){
   const motion=animations?'animated':'static';
   return `<iframe class="hero-portrait"
-    src="portrait/index.html?view=home&motion=${motion}&v=20261117-audit"
+    src="portrait/index.html?view=home&motion=${motion}&v=20261119-portrait"
     title="去手皮衣点阵人像" loading="eager" tabindex="-1"></iframe>`;
 }
 
@@ -299,6 +300,12 @@ const revealObserver=new IntersectionObserver(entries=>{
   }
 },{threshold:.08});
 
+const portraitObserver=new IntersectionObserver(([entry])=>{
+  if(!entry.target.isConnected)return;
+  portraitVisible=entry.isIntersecting&&entry.intersectionRatio>0;
+  sendPortraitMotion(entry.target);
+});
+
 function currentRoute(){
   const route=location.hash.slice(1)||'home';
   if(route!=='notes')return route;
@@ -308,6 +315,10 @@ function currentRoute(){
 
 function render(route=currentRoute()){
   if(!site)return;
+  clearTimeout(portraitScrollTimer);
+  portraitScrolling=false;
+  portraitVisible=false;
+  portraitObserver.disconnect();
   photoStrip=null;
   revealObserver.disconnect();
   renderedRoute=route;
@@ -346,7 +357,11 @@ function render(route=currentRoute()){
 
   document.title=title;
   description.content=summary;
-  page.querySelectorAll('iframe').forEach(frame=>frame.addEventListener('load',()=>sendPortraitMotion(frame)));
+  const portraitFrame=page.querySelector('.hero-portrait');
+  if(portraitFrame){
+    portraitObserver.observe(portraitFrame);
+    portraitFrame.addEventListener('load',()=>sendPortraitMotion(portraitFrame));
+  }
   page.querySelectorAll('.reveal').forEach(element=>revealObserver.observe(element));
   onScroll();
 }
@@ -371,10 +386,20 @@ document.querySelector('.skip').addEventListener('click',event=>{
   main.scrollIntoView({behavior:'instant',block:'start'});
 });
 
-function onScroll(){
+function onScroll(event){
   if(isNavigating||renderedRoute!==currentRoute())return;
   viewMemory.set(renderedRoute,{...viewMemory.get(renderedRoute),scroll:scrollY});
   scrollPhotoStrip();
+  if(event?.type!=='scroll'||renderedRoute!=='home')return;
+  clearTimeout(portraitScrollTimer);
+  if(!portraitScrolling){
+    portraitScrolling=true;
+    sendPortraitMotion();
+  }
+  portraitScrollTimer=setTimeout(()=>{
+    portraitScrolling=false;
+    sendPortraitMotion();
+  },160);
 }
 
 window.addEventListener('scroll',onScroll,{passive:true});
@@ -458,8 +483,8 @@ curtain.addEventListener('animationend',event=>{
   if(event.target===curtain)curtain.classList.remove('run');
 });
 
-function sendPortraitMotion(frame){
-  frame.contentWindow?.postMessage({type:'bweb:motion',enabled:animations},location.origin);
+function sendPortraitMotion(frame=page.querySelector('.hero-portrait')){
+  frame?.contentWindow?.postMessage({type:'bweb:motion',enabled:animations,scrolling:portraitScrolling,visible:portraitVisible},location.origin);
 }
 
 window.addEventListener('message',event=>{

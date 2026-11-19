@@ -1,38 +1,52 @@
 const stage = document.querySelector('#stage');
-const image = document.querySelector('#fallback');
 const query = new URLSearchParams(location.search);
-let mode = query.get('motion') === 'static' ? 'static' : 'animated';
+const preference = matchMedia('(prefers-reduced-motion: reduce)');
+let enabled = query.get('motion') !== 'static' && !preference.matches;
+let scrolling = false;
+let visible = parent === window;
 let engine;
 let loading;
-function fallback(state = 'fallback') {
-  image.style.opacity = '1';
-  document.querySelector('#portrait').style.opacity = '0';
-  document.querySelector('#code').style.opacity = '0';
-  stage.dataset.ready = state;
-  stage.dataset.mode = 'static';
-}
-async function applyMode() {
-  if (mode === 'static') {
-    engine?.setMotion(false);
-    fallback('static');
+
+async function applyPlayback() {
+  if (engine) {
+    engine.setPlayback(enabled, scrolling, visible);
     return;
   }
+  if (!enabled) {
+    stage.dataset.ready = 'static';
+    stage.dataset.mode = 'static';
+    return;
+  }
+  if (scrolling || !visible) return;
+  stage.dataset.ready = 'loading';
   try {
-    if(!loading)stage.dataset.ready='loading';
-    loading ||= import('./scene.js');
+    loading ??= import('./scene.js?v=20261119-portrait');
     engine = await loading;
-    engine.setMotion(mode === 'animated');
-  } catch { fallback(); }
+    engine.setPlayback(enabled, scrolling, visible);
+  } catch {
+    stage.dataset.ready = 'fallback';
+    stage.dataset.mode = 'static';
+  }
 }
-image.addEventListener('error', () => { document.querySelector('#status').textContent = '人像暂时不可用'; });
+
 window.addEventListener('message', event => {
   if (event.origin !== location.origin || event.source !== parent) return;
   if (event.data?.type !== 'bweb:motion' || typeof event.data.enabled !== 'boolean') return;
-  mode = event.data.enabled ? 'animated' : 'static';
-  applyMode();
+  enabled = event.data.enabled;
+  scrolling = event.data.scrolling === true;
+  visible = event.data.visible !== false;
+  applyPlayback();
 });
-// Wait for the owning page's latest setting: a pause during loading must win.
-if(parent===window)applyMode();
-else parent.postMessage({type:'bweb:portrait-ready'},location.origin);
+
+// The owning page can suspend animation before the graphics module loads.
+if (parent === window) {
+  preference.addEventListener('change', () => {
+    enabled = query.get('motion') !== 'static' && !preference.matches;
+    applyPlayback();
+  });
+  applyPlayback();
+} else {
+  parent.postMessage({type: 'bweb:portrait-ready'}, location.origin);
+}
 
 

@@ -1,4 +1,36 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><title>点阵人像背景</title><style>
-*{box-sizing:border-box}html,body,#stage{width:100%;height:100%;margin:0;overflow:hidden}body{background:#03090c}#stage{position:relative;background:radial-gradient(ellipse at 42% 45%,#0c1c27,#020709 70%)}canvas,#fallback,.vignette{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}#code{z-index:0}#fallback{z-index:1;object-fit:contain;object-position:36% center;opacity:0;mix-blend-mode:screen}#portrait{z-index:2}.vignette{z-index:3;background:radial-gradient(ellipse at 43% 46%,transparent 35%,#01060855 85%)}#status{display:none}
-</style><style>#fallback{opacity:1;filter:grayscale(1) sepia(.3) hue-rotate(155deg) saturate(1.4) brightness(.72)}@media(prefers-reduced-motion:reduce){*{transition:none}}</style></head><body><div id="stage"><canvas id="code" aria-hidden="true"></canvas><img id="fallback" src="assets/portrait.webp" alt="去手部皮衣人像" decoding="async"><canvas id="portrait" aria-label="点阵人像背景"></canvas><div class="vignette"></div><span id="status" role="status"></span></div><script type="module" src="boot.js?v=20261117-audit"></script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>点阵人像背景</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body, #stage { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+    body { background: #03090c; }
+    #stage { position: relative; background: radial-gradient(ellipse at 42% 45%, #0c1c27, #020709 70%); }
+    canvas, #fallback, .vignette { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    canvas { opacity: 0; }
+    #fallback { z-index: 1; }
+    #fallback img { position: absolute; left: 50%; height: 100%; width: auto; transform: translateX(-50%); }
+    #portrait { z-index: 2; }
+    .vignette { z-index: 3; background: radial-gradient(ellipse at 43% 46%, transparent 35%, #01060855 85%); }
+    #stage[data-rendering="true"] canvas { opacity: 1; }
+    #stage[data-rendering="true"] #fallback { opacity: 0; }
+  </style>
+</head>
+<body>
+  <div id="stage">
+    <canvas id="code" aria-hidden="true"></canvas>
+    <picture id="fallback">
+      <source media="(max-width: 699px)" srcset="assets/poster-narrow.webp">
+      <img src="assets/poster-wide.webp" alt="点阵人像" fetchpriority="high" decoding="async">
+    </picture>
+    <canvas id="portrait" aria-hidden="true"></canvas>
+    <div class="vignette"></div>
+  </div>
+  <script type="module" src="boot.js?v=20261119-portrait"></script>
+</body>
+</html>
 
