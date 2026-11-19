@@ -1,6 +1,6 @@
 {
   "assets/fonts/notosanssc-ofl.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
-  "assets/fonts/notosanssc-site.woff2": "8a7778bba957fd364ca9e265a78635df1b808c8e1e5dcb87d30bd61f92bb8209",
+  "assets/fonts/notosanssc-site.woff2": "bf9ca0bb841c6b9f2b24b123ea6dc8e057d2e6c5cd7946e62ceaa798c17e28d3",
   "assets/fonts/spacegrotesk-ofl.txt": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
   "assets/fonts/spacegrotesk-regular.woff2": "65fd17fcbd2e2f522940b5f67ead3d23329e02891aa5495e74d11a499c0b0673",
   "assets/fonts/spacegrotesk.woff2": "685bbbf69fa616df1ef81847c85fc76be097ddfb3468ff2257be54511ab3130f",
@@ -10,7 +10,8 @@
   "assets/projects/compute-axis.webp": "25ed6959975109a988b1f7a3d203f39378f3b51e3ad7eea4ba041239061fab55",
   "assets/projects/game.svg": "93434bd1335559f5b7e65c379aa2d21911f7b14613769097adb3a2fda708a3ec",
   "assets/projects/keyboard.webp": "e68227e56791511745f588b7a453dca1eb872d6584a823ca658b860a5b582a4f",
-  "content/projects.json": "10670d558eaf69e653660e9781507b979ff8eeb02c1e98746a1c5693b7aead66",
+  "assets/projects/seventh-wound-key-art.jpg": "be9ce48f02c0bbba24d747160bb305cf199ac61ab5ef2ddf7e668f14fa2d6232",
+  "content/projects.json": "1c61cdd48ef2960f3be9fd4754337b112d9c384f5403e293977176da0031cc52",
   "index.html": "d6595a32fc1e2ec4d0bf1d8296f0041c03c318ccc225427fe651f56ea50fabc3",
   "portrait/assets/portrait.webp": "77b0dc0b11c9d0d3405ef1baaeecccb87225013cec79d2479ff60414272b8b0f",
   "portrait/boot.js": "319d2df1d5487ce14667c7ffe78dab65b9894af0e2e722cb99c57ceab201d8af",

@@ -102,6 +102,33 @@
         }
       ],
       "reviewedAt": "2026-11-19"
+    },
+    {
+      "id": "seventh-wound",
+      "name": "第七道伤",
+      "summary": "俯视角竞技场生存射击。在无尽敌潮中升级刻印、强化武器，撑过下一波。",
+      "category": "游戏",
+      "stage": "网页版可试玩",
+      "cover": "assets/projects/seventh-wound-key-art.jpg",
+      "coverAlt": "《第七道伤》黑红色插画，俯视圆形竞技场里，一名幸存者冲出怪物包围。",
+      "coverCaption": "为作品卡片制作的概念插画。",
+      "targetUrl": "https://blackq166s-web.github.io/SEVENTH_WOUND/",
+      "featured": false,
+      "order": 0,
+      "intro": "在无尽敌潮中生存的俯视角浏览器射击游戏。",
+      "contribution": [],
+      "sections": [
+        {
+          "title": "竞技场 · 无尽潮汐",
+          "text": "抵挡逐波来袭的敌人，升级时选择刻印，拾取同款武器可解锁强化。"
+        }
+      ],
+      "outcomes": [
+        "网页版本已上线，可直接试玩。"
+      ],
+      "limits": [],
+      "resources": [],
+      "reviewedAt": "2026-11-19"
     }
   ]
 }
