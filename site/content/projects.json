@@ -89,7 +89,7 @@
       "cover": "assets/projects/compute-axis-screenshot-v2.webp",
       "coverAlt": "算力坐标选型界面，展示模型搜索、四档量化容量、速度与预算筛选，以及候选配置。",
       "coverCaption": "截取自正式版硬件选型页面，精简说明与次要控件以方便在作品卡片上阅读。",
-      "targetUrl": "https://compute-axis-psi.vercel.app/",
+      "targetUrl": "https://compute-axis.black-q.com/",
       "featured": false,
       "order": 25,
       "intro": "为在本地运行大模型的人提供硬件规格对照和配置初筛。",
