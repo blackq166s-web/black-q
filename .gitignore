@@ -42,3 +42,23 @@ next-env.d.ts
 
 # Local credentials
 SECRETS.local.md
+
+# Share the template while ignoring local environment files.
+!.env.example
+*.key
+*.p12
+*.pfx
+
+# Local tooling, cache and build artifacts.
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.cache/
+.playwright-cli/
+/dist/
+/output/
+/_staging/
+*.tmp
+*.bak
+Thumbs.db
