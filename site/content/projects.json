@@ -141,6 +141,35 @@
       "limits": [],
       "resources": [],
       "reviewedAt": "2026-11-19"
+    },
+    {
+      "id": "small-ai-workstation-selector",
+      "name": "小型 AI 工作站选型台",
+      "summary": "对比六款小型 AI 工作站的规格、参考报价与公开推理表现，按量化、上下文和并发估算模型内存余量。",
+      "category": "AI 与工程",
+      "stage": "网页工具",
+      "cover": "assets/projects/small-ai-workstation-selector.webp",
+      "coverAlt": "深色工作台上并排摆放三台不同外形的小型工作站。",
+      "coverCaption": "ImageGen 生成的选型主题概念图。",
+      "targetUrl": "https://small-ai-workstation-selector.vercel.app/",
+      "featured": false,
+      "order": 26,
+      "intro": "给准备在小型工作站上运行 Qwen3.6-35B-A3B 的人一个对比入口。",
+      "contribution": [],
+      "sections": [
+        {
+          "title": "设备对比与内存模拟",
+          "text": "浏览六款候选规格、参考报价及公开推理结果，调整量化精度、上下文长度和并发，查看预估内存余量。"
+        }
+      ],
+      "outcomes": [
+        "支持按厂商筛选候选工作站、模拟模型内存和导出对比数据。"
+      ],
+      "limits": [
+        "公开实测条件及参考报价见项目页。内存余量为规划估算。"
+      ],
+      "resources": [],
+      "reviewedAt": "2026-11-20"
     }
   ]
 }
