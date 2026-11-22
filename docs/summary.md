@@ -33,3 +33,9 @@
 ## D 版页脚
 
 2026-11-22。页脚采用窄体大写，优先使用系统 Arial Narrow Bold，回退到随站提供的 Archivo Narrow Bold。字库来自 [Google Fonts 固定提交](https://github.com/google/fonts/tree/06bfe0d62a98375cb09c942fa18e68bd32cff057/ofl/archivonarrow)，使用 FontTools 固定为 700 字重并保留 U+0020–007E、U+2018–2019。随站附带字体许可。发布基线为 `7b23a04`。如需回退，可恢复该部署或从最新 `main` 恢复本次涉及的页脚和字体资源。
+
+## 整站 P1
+
+2026-11-22。以已上线 D 版页脚的 `dbb9e17` 为基线。`/about`、`/about/` 进入 `/#about`，`/projects`、`/projects/` 进入 `/#work`。手机窄屏和短横屏在首屏显示完整标题及「浏览作品」。项目卡片数据和资源沿用发布基线。
+
+验收覆盖四条跳转、手机首屏和作品入口、桌面人像动效与静态回退、D 版页脚和 39 个运行文件。P1 的回退基线为 `dbb9e17`，可保留 D 版页脚。

@@ -105,11 +105,15 @@ function portrait(){
 }
 
 function homePage(){
+  const title='<span>Black Q</span><span class="marquee-separator"> — </span><span class="hero-subtitle">Projects &amp; Play</span><span class="marquee-separator"> — </span>';
   return `<section class="hero">
     ${portrait()}
     <div class="location">Ideas into<br>something real<span class="globe">◎</span></div>
-    <div class="role">AI & Engineering<br>Projects & Play</div>
-    <h1 class="marquee" aria-label="Black Q，项目与探索"><span aria-hidden="true">Black Q — Projects & Play — </span><span aria-hidden="true">Black Q — Projects & Play — </span></h1>
+    <div class="hero-content">
+      <div class="role">AI &amp; Engineering<span class="hero-role-detail"><br>Projects &amp; Play</span></div>
+      <h1 class="marquee" aria-label="Black Q，项目与探索"><span aria-hidden="true">${title}</span><span aria-hidden="true">${title}</span></h1>
+      <a class="hero-work-link" href="#work">浏览作品</a>
+    </div>
   </section>
   <section class="intro">
     <h2 class="reveal">把想法变成作品，<br>也记录一路上的探索。<br>这里有我的项目与尝试。</h2>

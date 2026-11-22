@@ -7,7 +7,7 @@
 - 正式站为 [black-q.com](https://black-q.com/)。本次仓库交接基于 `8e09dd1` 的静态站，`site/` 包含 37 个运行文件和 7 张作品卡片。「小型 AI 工作站选型台」已换用站点截图封面。
 - 仓库已具备本地预览、按需刷新字库、生成 SHA-256 发布清单和校验内容的入口。启动与命令见 [README.md](README.md)。维护和回退见 [docs/summary.md](docs/summary.md)。
 - 历史 Next.js 个人站保留供参考与回退。新工作以当前 `main` 的 `site/` 为起点。
-- 本轮整站发布范围为 D 版窄体大写页脚，技术与回退基线见 [维护记录](docs/summary.md#d-版页脚)。
+- D 版窄体大写页脚见 [维护记录](docs/summary.md#d-版页脚)。本轮整站 P1 补齐关于我与作品的分享跳转，并调整手机窄屏和横屏首页。验证范围见 [整站 P1](docs/summary.md#整站-p1)。
 
 ## 下一步
 
