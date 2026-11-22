@@ -28,6 +28,7 @@ def check():
         'index.html', 'site.js', 'style.css',
         'assets/fonts/spacegrotesk-regular.woff2', 'assets/fonts/spacegrotesk.woff2',
         'assets/fonts/spacegrotesk-ofl.txt', 'assets/fonts/notosanssc-ofl.txt',
+        'assets/fonts/archivo-narrow-footer-bold.woff2', 'assets/fonts/archivo-narrow-ofl.txt',
         'portrait/index.html', 'portrait/boot.js', 'portrait/scene.js',
         'portrait/assets/portrait.webp', 'portrait/assets/poster-wide.webp', 'portrait/assets/poster-narrow.webp',
         'portrait/vendor/three.module.js', 'portrait/vendor/THREE-LICENSE.txt',

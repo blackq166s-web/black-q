@@ -9,6 +9,8 @@
   "assets/about/vinyl.webp": "5f8ca58f6ac474561923184c06887102f9b36fe40a2e8aa11a6d8d3981cb5910",
   "assets/about/water-lights.webp": "bedfc6f9adc613e625d479ec8fc7aa7873a665fad9e5c72ddc069b289495ad04",
   "assets/about/workbench.webp": "b231bdd5c5c579ffbf10fdaa0923f659bd8f7151f15d257cf1f894e61ba0ba40",
+  "assets/fonts/archivo-narrow-footer-bold.woff2": "8cd29bc2f482c3c03481a35f76e0e7ed49a3a1b1a2a10a961c85ee3a92c61e00",
+  "assets/fonts/archivo-narrow-ofl.txt": "3dee8d4d160d475c4482d3906a56328f0e8fb3cb3e9e367eaed50fd8f1e3dfbe",
   "assets/fonts/notosanssc-ofl.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
   "assets/fonts/notosanssc-site.woff2": "d6247a0ab32cb747b285736469533c2e412d9ccaf350e9108627fd1ad711ac65",
   "assets/fonts/spacegrotesk-ofl.txt": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
@@ -24,7 +26,7 @@
   "assets/projects/small-ai-workstation-selector-screenshot-v2.webp": "9f0e5084f4622e8a8af3ec340f6ddfe20dca39cc35c9d3d8fa22d1c189b2ec6f",
   "assets/projects/small-ai-workstation-selector.webp": "2d0b5b6753995acdaed0f6256c062fb8156473b1d263a5d333ad870d79b00f5d",
   "content/projects.json": "3898a2bebeace233284ddd7e70c20c8c4a0c28ed4f06c45dc2d67d7af50ea99b",
-  "index.html": "23a38e6973319b046ddafc2c3f770b22d6bab2657e362554036955a5ba6c6a1b",
+  "index.html": "12078d8d589d7342408442b06a766115bedb6d377c2d805edba912e267168b03",
   "portrait/assets/portrait.webp": "77b0dc0b11c9d0d3405ef1baaeecccb87225013cec79d2479ff60414272b8b0f",
   "portrait/assets/poster-narrow.webp": "143cba5e2fe5d8e834b9715da3b07d655fc475d09198641ef580230b344bb721",
   "portrait/assets/poster-wide.webp": "a458f2a69ed80061eb88f241f0471fde2f943ebf7f7a7a49c016fa6dccd15cda",
@@ -35,5 +37,5 @@
   "portrait/vendor/three.module.js": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
   "projects/keyboard-preview.html": "170c0ba6002ecf34f86193fa7df5265415ba6917d0bcf24e06b5870a34e79e3c",
   "site.js": "4808ce4fc955123edbe1c07af64cb403e3bf90d74f86dc6746776727e186553d",
-  "style.css": "4329b27eefa42996450b4cc74835e95ba1989c89965db345efa200f6a8d511a9"
+  "style.css": "138e0037a0b371203bb6a0c6c65fcaee1eb1e9d84ed5c50b7cd52a75452a9c64"
 }

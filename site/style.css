@@ -19,6 +19,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Archivo Narrow";
+  src: url("./assets/fonts/archivo-narrow-footer-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+  unicode-range: U+0020-007E, U+2018-2019;
+}
+
 /* Base */
 :root {
   --ink: #1c1d20;
@@ -957,10 +965,12 @@ footer {
 
 .footer-main h2 {
   margin: 0;
-  font-size: clamp(34px, 4.7vw, 62px);
-  font-weight: 400;
-  line-height: 1.27;
-  letter-spacing: -.045em;
+  font-family: "Arial Narrow", "Archivo Narrow", sans-serif;
+  font-size: clamp(36px, 5.7vw, 76px);
+  font-weight: 700;
+  line-height: .88;
+  letter-spacing: -.026em;
+  text-transform: uppercase;
 }
 
 .footer-contact {

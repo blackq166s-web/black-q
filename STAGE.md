@@ -1,12 +1,13 @@
 # 当前阶段
 
-更新日期 2026-11-20（Asia/Shanghai）。
+更新日期 2026-11-22（Asia/Shanghai）。
 
 ## 当前状态
 
 - 正式站为 [black-q.com](https://black-q.com/)。本次仓库交接基于 `8e09dd1` 的静态站，`site/` 包含 37 个运行文件和 7 张作品卡片。「小型 AI 工作站选型台」已换用站点截图封面。
 - 仓库已具备本地预览、按需刷新字库、生成 SHA-256 发布清单和校验内容的入口。启动与命令见 [README.md](README.md)。维护和回退见 [docs/summary.md](docs/summary.md)。
 - 历史 Next.js 个人站保留供参考与回退。新工作以当前 `main` 的 `site/` 为起点。
+- 本轮整站发布范围为 D 版窄体大写页脚，技术与回退基线见 [维护记录](docs/summary.md#d-版页脚)。
 
 ## 下一步
 
