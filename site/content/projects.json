@@ -151,7 +151,7 @@
       "cover": "assets/projects/small-ai-workstation-selector-screenshot-v2.webp",
       "coverAlt": "小型 AI 工作站选型台的实际界面，展示三款候选设备及按量化、上下文和并发估算的内存占用。",
       "coverCaption": "取自公开版选型台的实际页面，精简了设备列表和说明。",
-      "targetUrl": "https://small-ai-workstation-selector.vercel.app/",
+      "targetUrl": "https://small-ai-workstation-selector.black-q.com/",
       "featured": false,
       "order": 26,
       "intro": "给准备在小型工作站上运行 Qwen3.6-35B-A3B 的人一个对比入口。",
