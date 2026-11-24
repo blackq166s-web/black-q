@@ -170,6 +170,33 @@
       ],
       "resources": [],
       "reviewedAt": "2026-11-20"
+    },
+    {
+      "id": "amd395",
+      "name": "AMD395小型AI服务器部署与测试",
+      "summary": "在 AMD Ryzen AI Max+ 395 上部署本地大模型，对比五种方案的吞吐、响应时间和回答质量。",
+      "category": "AI 与工程",
+      "stage": "测试报告",
+      "cover": "assets/projects/amd395.webp",
+      "coverAlt": "AMD 395 测试报告界面，展示各方案的输出吞吐与完整响应时间折线图。",
+      "coverCaption": "取自脱敏报告的性能测试页。",
+      "featured": false,
+      "order": 21,
+      "intro": "这份交互报告记录小型 AI 服务器上的模型部署配置和实测结果。",
+      "contribution": [],
+      "sections": [
+        {
+          "title": "部署配置与测试结果",
+          "text": "可切换对比基线、输入长度和响应指标，查看性能、质量及执行证据，并导出报告数据。"
+        }
+      ],
+      "outcomes": [],
+      "limits": [
+        "测试结论适用于报告所列配置和样本。"
+      ],
+      "resources": [],
+      "reviewedAt": "2026-11-24",
+      "targetUrl": "https://amd395.black-q.com/"
     }
   ]
 }
