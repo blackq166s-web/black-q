@@ -224,6 +224,33 @@
       ],
       "resources": [],
       "reviewedAt": "2026-11-27"
+    },
+    {
+      "id": "deepseek-v41-flash-hardware-guide",
+      "name": "DeepSeek V4.1 Flash 私有化部署选型指南",
+      "summary": "对比六类 GPU 与 NPU 部署方案，按业务需求查看显存门槛、适用场景和参考配置。",
+      "category": "AI 与工程",
+      "stage": "选型指南",
+      "cover": "assets/projects/deepseek-v41-flash-hardware-guide.webp",
+      "coverAlt": "DeepSeek V4.1 Flash 硬件选型指南的页面截图。",
+      "coverCaption": "取自指南实际网页。",
+      "targetUrl": "projects/deepseek-v41-flash-hardware-guide/index.html",
+      "featured": false,
+      "order": 27,
+      "intro": "围绕 DeepSeek V4.1 Flash 的本地部署，从工作站到企业级 GPU 与 NPU 配置提供选型参考。",
+      "contribution": [],
+      "sections": [
+        {
+          "title": "部署方案与显存对比",
+          "text": "按平台筛选硬件并勾选对比，切换典型部署与扩展配置，结合业务场景查看选型建议。"
+        }
+      ],
+      "outcomes": [],
+      "limits": [
+        "实际业务性能和交付配置需结合部署环境验证。"
+      ],
+      "resources": [],
+      "reviewedAt": "2026-11-27"
     }
   ]
 }
