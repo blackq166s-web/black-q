@@ -197,6 +197,33 @@
       "resources": [],
       "reviewedAt": "2026-11-24",
       "targetUrl": "https://amd395.black-q.com/"
+    },
+    {
+      "id": "three-platform-ai-benchmarks",
+      "name": "三平台推理性能对比",
+      "summary": "对照 AMD 395、昇腾双卡与 RTX PRO 6000 双卡，按输入档位查看生成速度、首字等待和测试条件。",
+      "category": "AI 与工程",
+      "stage": "测试报告",
+      "cover": "assets/projects/three-platform-ai-benchmarks.webp",
+      "coverAlt": "三平台推理性能报告截图，展示四档输入的分组柱状图。",
+      "coverCaption": "取自报告的生成速度对比图。",
+      "targetUrl": "projects/three-platform-ai-benchmarks/index.html",
+      "featured": false,
+      "order": 22,
+      "intro": "可切换两项指标、四档输入与图表刻度，并查看对应测试条件和公开来源。",
+      "contribution": [],
+      "sections": [
+        {
+          "title": "输出速度与首字等待",
+          "text": "对照各档位的测试条件，按报告标注区分原始测量和推算值。"
+        }
+      ],
+      "outcomes": [],
+      "limits": [
+        "模型、量化、负载和统计口径各有差异，图表用于部署参考。"
+      ],
+      "resources": [],
+      "reviewedAt": "2026-11-27"
     }
   ]
 }

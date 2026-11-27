@@ -12,7 +12,7 @@
   "assets/fonts/archivo-narrow-footer-bold.woff2": "8cd29bc2f482c3c03481a35f76e0e7ed49a3a1b1a2a10a961c85ee3a92c61e00",
   "assets/fonts/archivo-narrow-ofl.txt": "3dee8d4d160d475c4482d3906a56328f0e8fb3cb3e9e367eaed50fd8f1e3dfbe",
   "assets/fonts/notosanssc-ofl.txt": "1c05c68c34f9708415aada51f17e1b0092d2cea709bf4a94cd38114f9e73d7d9",
-  "assets/fonts/notosanssc-site.woff2": "7b88e5d141005ca1408d419b3c2b4c94c9ca9cbe556c2b824d1237be1046514a",
+  "assets/fonts/notosanssc-site.woff2": "ccabe9ae245fa1287d17bca51030cd6652fe8c1f9b058226fe2880a98d4fdb1c",
   "assets/fonts/spacegrotesk-ofl.txt": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
   "assets/fonts/spacegrotesk-regular.woff2": "65fd17fcbd2e2f522940b5f67ead3d23329e02891aa5495e74d11a499c0b0673",
   "assets/fonts/spacegrotesk.woff2": "685bbbf69fa616df1ef81847c85fc76be097ddfb3468ff2257be54511ab3130f",
@@ -26,7 +26,8 @@
   "assets/projects/seventh-wound-key-art.jpg": "be9ce48f02c0bbba24d747160bb305cf199ac61ab5ef2ddf7e668f14fa2d6232",
   "assets/projects/small-ai-workstation-selector-screenshot-v2.webp": "9f0e5084f4622e8a8af3ec340f6ddfe20dca39cc35c9d3d8fa22d1c189b2ec6f",
   "assets/projects/small-ai-workstation-selector.webp": "2d0b5b6753995acdaed0f6256c062fb8156473b1d263a5d333ad870d79b00f5d",
-  "content/projects.json": "2bcdad96ad487f5c79922796bf642101da189fff41a12cac7dbeaa3d74871df8",
+  "assets/projects/three-platform-ai-benchmarks.webp": "03ff9d5b76977a3ee89b55fd47c78cc9ff9720d6d3689c63045b613128782774",
+  "content/projects.json": "59d23319781ab7977a8376a0523a90fe13b2e942a47f7b4f48505a9d75763a31",
   "index.html": "c8b436e12240d81a122fb3d8d11c307b3d49efe6b97209c52e0a85f6f9e5d355",
   "portrait/assets/portrait.webp": "77b0dc0b11c9d0d3405ef1baaeecccb87225013cec79d2479ff60414272b8b0f",
   "portrait/assets/poster-narrow.webp": "143cba5e2fe5d8e834b9715da3b07d655fc475d09198641ef580230b344bb721",
@@ -37,6 +38,7 @@
   "portrait/vendor/THREE-LICENSE.txt": "4c40a1ef62450b857c3b2aaf294936304cd552d965fbcd9d32d4c5bcf4ba4454",
   "portrait/vendor/three.module.js": "ce1fa418de16a19495a9f72495580e3015d7745c296d3ce0485897f902ddedfb",
   "projects/keyboard-preview.html": "170c0ba6002ecf34f86193fa7df5265415ba6917d0bcf24e06b5870a34e79e3c",
+  "projects/three-platform-ai-benchmarks/index.html": "18932e6631c9fd6a777e5e34b7eeb558b6611018e721fef61f593b4ae7315e29",
   "site.js": "58337dd4dec5e77dd12ccabc2c37fed6944b60518756f9ebcf9301669ffc75b2",
   "style.css": "70dc4c9c7f3e32fa5ae3c0bd577b82d5fa93b4ad933f7e725663d03237411e00"
 }
