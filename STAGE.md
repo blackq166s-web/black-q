@@ -8,7 +8,7 @@
 - 仓库已具备本地预览、按需刷新字库、生成 SHA-256 发布清单和校验内容的入口。启动与命令见 [README.md](README.md)。维护和回退见 [docs/summary.md](docs/summary.md)。
 - 历史 Next.js 个人站保留供参考与回退。新工作以当前 `main` 的 `site/` 为起点。
 - D 版窄体大写页脚见 [维护记录](docs/summary.md#d-版页脚)。本轮整站 P1 补齐关于我与作品的分享跳转，并调整手机窄屏和横屏首页。验证范围见 [整站 P1](docs/summary.md#整站-p1)。
-- 标签页图标在 `work/site-shared-favicon` 本地统一，首页、同源报告及预览页共用双弧 Q。验证及回退见 [维护记录](docs/summary.md#主站标签页图标)。
+- 首页、同源报告及预览页共用透明双弧 Q 标签页图标。左上角字标以双弧图形替代 `Black` 后的字母 Q，点击返回首页。验证及回退见 [维护记录](docs/summary.md#主站标签页图标)。
 
 ## 下一步
 

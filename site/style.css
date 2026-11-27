@@ -159,14 +159,22 @@ header nav a[aria-current]::after {
   transform: scale(1);
 }
 
-.brand { padding-top: 8px; }
-
-.brand span {
-  display: inline-block;
-  transition: transform .4s;
+.brand {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 600;
 }
 
-.brand:hover span { transform: translateX(5px); }
+.brand-mark {
+  width: .9em;
+  height: .9em;
+  margin-inline-start: .03em;
+  vertical-align: -.12em;
+}
+
+header:not(.dark) .brand-mark {
+  filter: brightness(0) invert(1);
+}
 
 /* Homepage portrait */
 .hero {
@@ -1092,11 +1100,7 @@ footer {
   }
 
   header .brand {
-    display: flex;
-    align-items: center;
-    gap: .25em;
     min-height: 44px;
-    padding-top: 0;
     font-size: 13px;
   }
 
