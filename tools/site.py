@@ -25,7 +25,7 @@ def local_path(value):
 
 def check():
     for filename in (
-        'index.html', 'site.js', 'style.css',
+        'index.html', 'site.js', 'style.css', 'favicon.ico',
         'assets/fonts/spacegrotesk-regular.woff2', 'assets/fonts/spacegrotesk.woff2',
         'assets/fonts/spacegrotesk-ofl.txt', 'assets/fonts/notosanssc-ofl.txt',
         'assets/fonts/archivo-narrow-footer-bold.woff2', 'assets/fonts/archivo-narrow-ofl.txt',
